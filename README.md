@@ -5,13 +5,12 @@ Jetson 보드에서 작동할 수 있게 컴퓨터 비전 기술 및 ROS package
 **주요 기술 및 기능:**
 
 * **실시간 깊이 이미지 획득 및 Point Cloud 생성:**
-    * ORB-SLAM (Oriented FAST and Rotated BRIEF Simultaneous Localization and Mapping) 알고리즘을 Jetson 보드에서 실행하여 실시간으로 주변 환경에 대한 깊이 이미지 획득.
-    * 획득된 깊이 이미지를 기반으로 3D Point Cloud를 생성하여 주변 환경을 3차원 데이터로 표현.
-* **Point Cloud 처리 및 Local Costmap 생성:**
-    * Pass-through 필터를 사용하여 Point Cloud 데이터에서 불필요한 부분을 제거하고, 차량 주변의 장애물 정보를 정제.
+    * ORB-SLAM (Oriented FAST and Rotated BRIEF Simultaneous Localization and Mapping) 알고리즘을 Jetson 보드에서 실행하여 실시간으로 주변 환경에 대한 depth image 획득.
+    * 깊이 이미지(Depth Image)를 입력받아 3D Point Cloud를 생성하고, 0.08m 크기의 Voxel Grid 필터를 적용해 데이터를 downsampling 하고, Pass-through 필터를 적용하여 z축의 필요없는 데이터를 제거함.
+* **Local Costmap 생성:**
     * 정제된 Point Cloud 데이터를 기반으로 차량 주변의 장애물 정보를 2D 그리드 형태로 표현하는 Local Costmap 생성.
 * **Motion Primitive 기반 자율주행 알고리즘 개발:**
-    * 차량의 움직임을 정의하는 Motion Primitive (예: 직진, 좌회전, 우회전 등)를 기반으로 자율주행 알고리즘 개발.
+    * 차량의 움직임을 정의하는 Motion Primitive를 기반으로 자율주행 알고리즘 개발.
     * Local Costmap 정보를 이용하여 현재 상황에 적합한 Motion Primitive를 선택하고, 차량의 경로 계획.
 * **Darknet 기반 숫자 인식 및 분류:**
     * 경량화된 YOLOv4-tiny 모델을 사용하여 Jetson 보드에서 실시간으로 숫자 인식 및 분류 시스템 구현.
