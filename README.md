@@ -1,6 +1,7 @@
  ## EE405 전자 디자인 랩: 지능형 자율주행차 구현 (Fall 2023)
 
 Jetson 보드에서 작동할 수 있게 컴퓨터 비전 기술 및 ROS package를 활용하여 자율주행 시스템에 대한 내용을 담음.
+실제 작동하려면 makefile 
 
 **주요 기술 및 기능:**
 
@@ -23,3 +24,8 @@ Jetson 보드에서 작동할 수 있게 컴퓨터 비전 기술 및 ROS package
 
 * **작동 테스트 1:** [https://youtu.be/8Pu4vNLR7Cg](https://youtu.be/8Pu4vNLR7Cg)
 * **작동 테스트 2:** [https://youtu.be/YYSQ4h-jc6A](https://youtu.be/YYSQ4h-jc6A)
+
+ 
+* License 
+Hyunki Seong 조교님께서 제공해주신 템플릿 코드를 기반으로 작성 [BSD 2-Clause License](https://opensource.org/license/BSD-2-Clause)
+* [https://github.com/Guri-cccc/EE405A_2023/tree/main/Week10](https://github.com/Guri-cccc/EE405A_2023/tree/main/Week10)
