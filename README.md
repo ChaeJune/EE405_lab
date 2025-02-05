@@ -9,7 +9,6 @@ Jetson 보드에서 작동할 수 있게 컴퓨터 비전 기술 및 ROS package
     * 깊이 이미지(Depth Image)를 입력받아 3D Point Cloud를 생성하고, 0.08m 크기의 Voxel Grid 필터를 적용해 데이터를 downsampling 하고, Pass-through 필터를 적용하여 z축의 필요없는 데이터를 제거함.
 * **Local Costmap 생성:**
     * Point Cloud 데이터를 기반으로 차량 주변의 장애물 정보를 2D 그리드 형태로 표현하는 Local Costmap을 생성함.
-    * Amir Darwesh의 코드 사용함 - License: Modified BSD Software License (저작권자 표기시 사용가능)
 * **Motion Primitive 기반 자율주행 알고리즘 개발:**
     * 차량의 움직임을 정의하는 Motion Primitive를 기반으로 자율주행 알고리즘 개발.
     * Local Costmap 정보를 이용하여 현재 상황에 적합한 Motion Primitive를 선택하고, 차량의 경로 계획.
